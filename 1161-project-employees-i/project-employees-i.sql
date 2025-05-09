@@ -3,4 +3,4 @@
     FROM Project P
     LEFT JOIN Employee E ON E.employee_id = P.employee_id
     GROUP BY P.project_id
-
+    ORDER BY P.project_id
