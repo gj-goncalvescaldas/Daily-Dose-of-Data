@@ -20,7 +20,7 @@ JOIN
 
 
 SELECT 
-    ROUND(SUM(order_status = 'immediate') * 100.0 / COUNT(*), 2) AS immediate_percentage
+    ROUND(SUM(order_status = 'immediate') * 100/ COUNT(*), 2)AS immediate_percentage
 FROM CTE;
 
 /*
