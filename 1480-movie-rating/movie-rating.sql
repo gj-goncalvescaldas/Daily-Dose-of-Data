@@ -4,7 +4,7 @@ WITH CTE AS (
     JOIN Users u ON u.user_id = mr.user_id
     GROUP BY mr.user_id
     ORDER BY COUNT(*) DESC, u.name ASC
-
+    LIMIT 1
 ),
 
 CTE2 AS (
@@ -17,7 +17,7 @@ CTE2 AS (
     LIMIT 1    
 )
 
-SELECT(SELECT name FROM CTE LIMIT 1) AS results
+SELECT(SELECT name FROM CTE) AS results
 
 UNION ALL
 
