@@ -12,11 +12,13 @@ CTE2 AS (
     FROM MovieRating mr
     JOIN Movies m ON m.movie_id = mr.movie_id
     WHERE mr.created_at BETWEEN '2020-02-01' AND '2020-02-29'
-    GROUP BY mr.movie_id    
+    GROUP BY mr.movie_id
+    ORDER BY avg_rating DESC, title ASC 
+    LIMIT 1    
 )
 
 SELECT(SELECT name FROM CTE LIMIT 1) AS results
 
 UNION ALL
 
-SELECT (SELECT title FROM CTE2 ORDER BY avg_rating DESC, title ASC LIMIT 1) as results
+SELECT (SELECT title FROM CTE2) as results
