@@ -4,7 +4,7 @@ This repository tracks my personal progress solving LeetCode problems across dif
 
 ## ✅ Current Stats
 
-- **SQL:** Total exercises completed: **51**
+- **SQL:** Total exercises completed: **52**
 - **Daily Question (Python 3):** Total exercises completed: **2**
 
 ## 📁 Folder Structure
