@@ -1,13 +1,13 @@
-
-
 SELECT
     e.employee_id,
     e.name,
-    (SELECT COUNT(*) FROM Employees WHERE reports_to = e.employee_id) as reports_count,
-    ROUND((SELECT AVG(age) FROM Employees WHERE reports_to = e.employee_id), 0) as average_age   
+    COUNT(e1.reports_to) AS reports_count,
+    ROUND(AVG(e1.age)) AS average_age
 
 FROM Employees e
 
-HAVING reports_count > 0
+INNER JOIN Employees e1 ON e1.reports_to = e.employee_id
 
-order by employee_id
+GROUP BY employee_id
+
+ORDER BY employee_id
