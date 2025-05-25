@@ -1,18 +1,19 @@
 # 2104_User_with_Most_Approved_Flags
 
-Find the user(s) who flagged the most **distinct videos** that were **approved** by YouTube. The approval status is found in the `flag_review` table through the `reviewed_outcome` column.
+Identify the user(s) who flagged the most **distinct** videos that were later **approved** by YouTube. The final output should include **only the full name(s)** of the user(s), with a **space between first and last name**, and should be returned in **a single column**. In case of a tie, list all relevant users.
 
-You need to:
-- Join the `user_flags` table with `flag_review` using `flag_id`.
-- Filter for records where `reviewed_outcome` is 'APPROVED'.
-- Count the number of **unique** `video_id`s flagged and approved per user.
-- Return the full name(s) (first and last name concatenated with a space) of the user(s) with the highest count. If there's a tie, return all such users in a single column.
+You are provided with the following tables:
 
-**Tables:**
-- `user_flags`: Contains `user_firstname`, `user_lastname`, `video_id`, `flag_id`
-- `flag_review`: Contains `flag_id`, `reviewed_by_yt`, `reviewed_date`, `reviewed_outcome`
+- `user_flags`: Contains user information and the video each user flagged.
+  - `user_firstname` (text)
+  - `user_lastname` (text)
+  - `video_id` (text)
+  - `flag_id` (text)
 
-**Output:**
-- One column: `username`
-- Format: First name and last name separated by a space
-- Include all top users in case of a tie
+- `flag_review`: Contains the review details for each flag.
+  - `flag_id` (text)
+  - `reviewed_by_yt` (tinyint)
+  - `reviewed_date` (date)
+  - `reviewed_outcome` (text)
+
+Focus on flags where `reviewed_outcome` was **'APPROVED'** and determine which user flagged the most **unique videos** that match this outcome.
