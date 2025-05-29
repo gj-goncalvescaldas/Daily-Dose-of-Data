@@ -1,6 +1,10 @@
-# LeetCode Practice Progress
+# Daily Dose of Data
 
-This repository tracks my personal progress solving LeetCode problems across different domains.
+This repository documents my daily practice solving data-focused problems, with a strong emphasis on SQL and Python for data analysis.
+
+## Current Platforms
+- LeetCode  
+- StrataScratch
 
 ## ✅ Current Stats
 
@@ -9,5 +13,9 @@ This repository tracks my personal progress solving LeetCode problems across dif
 
 ## 📁 Folder Structure
 
-- `SQL/`: SQL problem solutions
+- `SQL/`: SQL problem solutions  
+  - **LeetCode:** File names use hyphens (`-`) as separators  
+    Example: `175-combine-two-tables`  
+  - **StrataScratch:** File names use underscores (`_`) as separators  
+    Example: `10046_Top_5_States_With_5_Star_Businesses`
 - `Daily Question/`: Daily LeetCode challenge solutions in Python 3
