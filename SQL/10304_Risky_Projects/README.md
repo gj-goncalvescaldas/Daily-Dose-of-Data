@@ -1,17 +1,40 @@
 # 10304_Risky_Projects
 
-You are provided with three datasets containing information about projects, employees, and their assignments. Each project has a name, a budget, a start date, and an end date. Each employee has an annual salary and can be assigned to one or more projects for specific durations.
+## Problem Description
 
-The task is to determine which projects are **overbudget**. A project is classified as overbudget if the total **prorated** salaries of all assigned employees exceed the budget of that project.
+You are given three datasets: `linkedin_projects`, `linkedin_emp_projects`, and `linkedin_employees`. Each project has a budget and timeline, and employees can be assigned to these projects for specific durations. Employees have annual salaries and may participate in multiple projects.
 
-Prorated salary is calculated based on the fraction of the year an employee works on a project. For instance, if an employee works on a project for 6 months, only 50% of their annual salary is considered for that project. All years are assumed to have 365 days (no leap years).
+The task is to identify which projects are **overbudget**. A project is considered overbudget when the **sum of the prorated salaries** of all employees assigned to it exceeds the project's budget.
 
-Your final result should list **only those projects** where the **sum of prorated salaries** surpasses the **project's budget**. The output must include:
-- Project title
-- Project budget
-- Total prorated employee expenses (rounded up to the nearest dollar)
+The **prorated salary** is calculated based on the proportion of the year the employee works on a project. Assume all years have 365 days. For example, if an employee works on a project for 6 months, only 50% of their annual salary counts toward that project.
 
-### Available Tables:
-- `linkedin_projects`: Contains project ID, title, budget, start and end dates.
-- `linkedin_emp_projects`: Contains assignments of employees to projects.
-- `linkedin_employees`: Contains employee ID, name, and annual salary.
+## Output
+
+Return only the projects where:
+- The **total prorated salaries** of all assigned employees **exceed the project budget**.
+
+The output should include:
+- `title` (Project title)
+- `budget` (Project budget)
+- `total_employee_expense` (Total prorated salary cost, rounded up to the nearest dollar)
+
+## Tables
+
+### linkedin_projects
+- `id` (int): Unique project ID
+- `title` (varchar): Name of the project
+- `budget` (int): Budget allocated to the project
+- `start_date` (date): Project start date
+- `end_date` (date): Project end date
+
+### linkedin_emp_projects
+- `emp_id` (int): Employee ID
+- `project_id` (int): Project ID
+- `start_date` (date): Assignment start date
+- `end_date` (date): Assignment end date
+
+### linkedin_employees
+- `id` (int): Employee ID
+- `first_name` (varchar): Employee's first name
+- `last_name` (varchar): Employee's last name
+- `salary` (int): Annual salary of the employee
