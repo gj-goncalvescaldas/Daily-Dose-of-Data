@@ -18,4 +18,4 @@ This repository documents my daily practice solving data-focused problems, with 
     Example: `175-combine-two-tables`  
   - **StrataScratch:** File names use underscores (`_`) as separators  
     Example: `10046_Top_5_States_With_5_Star_Businesses`
-- `Daily Question/`: Daily LeetCode challenge solutions in Python 3
+- `Daily Question/`:  Daily LeetCode challenge solutions in Python 3
