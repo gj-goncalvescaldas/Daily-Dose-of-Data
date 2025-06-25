@@ -1,4 +1,5 @@
 WITH page_times AS (
+
     SELECT
         user_id,
         DATE(timestamp) AS session_date,
