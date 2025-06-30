@@ -1,21 +1,27 @@
-WITH current_loans AS (
+WITH CTE AS (
     SELECT 
         book_id,
-        COUNT(*) AS current_borrowers
+        SUM(
+            CASE
+                WHEN return_date IS NULL THEN 1
+                ELSE 0
+            END
+        ) as current_borrowers 
     FROM borrowing_records
-    WHERE return_date IS NULL
     GROUP BY book_id
 )
 
-SELECT 
-    lb.book_id,
-    lb.title,
-    lb.author,
-    lb.genre,
-    lb.publication_year,
-    cl.current_borrowers
-FROM library_books lb
-JOIN current_loans cl
-    ON lb.book_id = cl.book_id
-WHERE lb.total_copies = cl.current_borrowers
-ORDER BY cl.current_borrowers DESC, lb.title ASC;
+SELECT
+    l.book_id,
+    l.title,
+    l.author,
+    l.genre,
+    l.publication_year,
+    cte.current_borrowers 
+    
+FROM library_books l
+JOIN CTE cte 
+    ON l.book_id = cte.book_id
+    AND l.total_copies = cte.cte.current_borrowers
+
+ORDER BY current_borrowers DESC, title ASC
