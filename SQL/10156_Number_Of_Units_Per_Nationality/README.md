@@ -1,28 +1,34 @@
 # 10156_Number_Of_Units_Per_Nationality
 
-We have data on rental properties and their owners. The goal is to determine how many different apartments (identified by `unit_id`) are owned by individuals under the age of 30, grouped by their nationality.
+**StrataScratch — Number Of Units Per Nationality**
 
-The results should be sorted to highlight which nationality owns the most apartments.
+Property ownership patterns can provide insights into demographics and investment behaviour. Understanding how many apartments are owned by younger hosts helps highlight which nationalities are most active in the housing market.
 
-## Tables
+**Task:**  
+Find how many different apartments (`unit_id`) are owned by hosts under 30 years old, grouped by nationality. Sort the results in descending order of the number of apartments owned.
 
-### airbnb_hosts
-- **host_id**: bigint
-- **age**: bigint
-- **gender**: text
-- **nationality**: text
+**Assumptions:**  
+- Only consider hosts **under 30 years old**.  
+- Apartments are uniquely identified by `unit_id`.  
+- Results should be grouped by nationality and sorted in descending order by apartment count.  
+- Each apartment is counted once per host.  
 
-### airbnb_units
-- **unit_id**: text
-- **host_id**: bigint
-- **city**: text
-- **country**: text
-- **n_bedrooms**: bigint
-- **n_beds**: bigint
-- **unit_type**: text
+**Tables:**  
+`airbnb_hosts`  
+- `age` (bigint) — host’s age.  
+- `gender` (text) — host’s gender.  
+- `host_id` (bigint) — unique identifier of the host.  
+- `nationality` (text) — nationality of the host.  
 
-## Expected Output
+`airbnb_units`  
+- `city` (text) — city of the unit.  
+- `country` (text) — country of the unit.  
+- `host_id` (bigint) — unique identifier of the host.  
+- `n_bedrooms` (bigint) — number of bedrooms.  
+- `n_beds` (bigint) — number of beds.  
+- `unit_id` (text) — unique identifier of the unit.  
+- `unit_type` (text) — type of the unit (e.g., apartment, house).  
 
-| nationality | apartment_count |
-|-------------|------------------|
-| USA         | 2                |
+**Output:**  
+- `nationality` (text) — nationality of the host.  
+- `n_units` (int) — number of apartments owned by hosts under 30.

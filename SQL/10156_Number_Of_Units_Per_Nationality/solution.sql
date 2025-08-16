@@ -1,13 +1,23 @@
-SELECT
-    h.nationality,
-    COUNT(DISTINCT u.unit_id) AS apartment_count
+WITH CTE AS (
+SELECT 
+    host_id,
+    COUNT(distinct unit_id) AS apartment_count
 
-FROM airbnb_hosts h
+FROM airbnb_units
 
-JOIN airbnb_units u ON h.host_id = u.host_id
+WHERE 
+    unit_type = 'Apartment'
+    
+GROUP BY 1)
 
-WHERE h.age < 30
+SELECT 
+    nationality,
+    apartment_count
 
-GROUP BY h.nationality
+FROM CTE u
 
-ORDER BY apartment_count DESC
+JOIN airbnb_hosts h
+    ON u.host_id = h.host_id
+    AND h.age < 30
+    
+GROUP BY 1
