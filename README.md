@@ -14,7 +14,7 @@ This repository documents my daily practice solving data-focused problems, with 
 
 ## 📁 Folder Structure
 
-- `SQL/`: SQL problem solutions  
+- `SQL/`: SQL problem solutions   
   - **LeetCode:** File names use hyphens (`-`) as separators  
     Example: `175-combine-two-tables`  
   - **StrataScratch:** File names use underscores (`_`) as separators  
