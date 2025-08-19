@@ -45,3 +45,4 @@ with open('README.md', 'w', encoding='utf-8') as file:
     if in_stats_section and not daily_written:
         file.write(f"- **Daily Question (Python 3):** Total exercises completed: **{daily_total}**\n")
         
+
