@@ -46,3 +46,4 @@ with open('README.md', 'w', encoding='utf-8') as file:
         file.write(f"- **Daily Question (Python 3):** Total exercises completed: **{daily_total}**\n")
         
 
+
