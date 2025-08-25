@@ -5,7 +5,8 @@ This repository documents my daily practice solving data-focused problems, with 
 ## Current Platforms
 - LeetCode  
 - StrataScratch  
-- DataLemur
+- DataLemur  
+- SQL Guroo  
 
 ## ✅ Current Stats
 
@@ -20,6 +21,8 @@ This repository documents my daily practice solving data-focused problems, with 
   - **StrataScratch:** File names use underscores (`_`) as separators  
     Example: `10046_Top_5_States_With_5_Star_Businesses`  
   - **DataLemur:** File names use hyphens (`-`) as separators and include company name  
-    Example: `linkedin-find-candidates-with-all-required-skills`
+    Example: `linkedin-find-candidates-with-all-required-skills`  
+  - **SQL Guroo:** File names use underscores (`_`) with the prefix `sqlguroo_` followed by an incremental ID and a concise title  
+    Example: `sqlguroo_1_Highest_price_from_all_the_orders`
 
 - `Daily Question/`:  Daily LeetCode challenge solutions in Python 3
