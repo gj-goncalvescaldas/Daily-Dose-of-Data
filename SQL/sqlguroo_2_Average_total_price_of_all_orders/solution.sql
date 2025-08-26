@@ -1,0 +1,1 @@
+SELECT ROUND(AVG(total_price), 2) AS avg_total_price FROM orders LIMIT 10;
