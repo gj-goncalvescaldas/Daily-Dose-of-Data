@@ -7,11 +7,12 @@ This repository documents my daily practice solving data-focused problems, with 
 - StrataScratch  
 - DataLemur  
 - SQL Guroo  
+- HackerRank  
 
 ## ✅ Current Stats
 
 - **SQL:** Total exercises completed: **244**
-- **Daily Question (Python 3):** Total exercises completed: **11**
+- **Daily Question (Python 3):** Total exercises completed: **12**
 
 ## 📁 Folder Structure
 
@@ -20,9 +21,11 @@ This repository documents my daily practice solving data-focused problems, with 
     Example: `175-combine-two-tables`  
   - **StrataScratch:** File names use underscores (`_`) as separators  
     Example: `10046_Top_5_States_With_5_Star_Businesses`  
-  - **DataLemur:** File names use hyphens (`-`) as separators and include company name  
+  - **DataLemur:** File names use hyphens (`-`) and include company name  
     Example: `linkedin-find-candidates-with-all-required-skills`  
   - **SQL Guroo:** File names use underscores (`_`) with the prefix `sqlguroo_` followed by an incremental ID and a concise title  
-    Example: `sqlguroo_1_Highest_price_from_all_the_orders`
+    Example: `sqlguroo_1_Highest_price_from_all_the_orders`  
+  - **HackerRank:** File names use underscores (`_`) with the prefix `hackerrank_` followed by an incremental ID and a concise title  
+    Example: `hackerrank_1_Pivot_Occupations`
 
-- `Daily Question/`:  Daily LeetCode challenge solutions in Python 3
+- `Daily Question/`: Daily LeetCode challenge solutions in Python 3
