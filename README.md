@@ -8,6 +8,7 @@ This repository documents my daily practice solving data-focused problems, with 
 - DataLemur  
 - SQL Guroo  
 - HackerRank  
+- sql-practice  
 
 ## ✅ Current Stats
 
@@ -25,7 +26,9 @@ This repository documents my daily practice solving data-focused problems, with 
     Example: `linkedin-find-candidates-with-all-required-skills`  
   - **SQL Guroo:** File names use underscores (`_`) with the prefix `sqlguroo_` followed by an incremental ID and a concise title  
     Example: `sqlguroo_1_Highest_price_from_all_the_orders`  
-  - **HackerRank:** File names use underscores (`_`) with the prefix `hackerrank_` followed by an concise title  
-    Example: `hackerrank_Pivot_Occupations`
+  - **HackerRank:** File names use underscores (`_`) with the prefix `hackerrank_` followed by a concise title  
+    Example: `hackerrank_Pivot_Occupations`  
+  - **sql-practice:** File names use underscores (`_`) with the prefix `sqlpractice_` followed by an incremental ID and a concise title  
+    Example: `sqlpractice_1_Find_Customers_With_Orders`
 
-- `Daily Question/`: Daily LeetCode challenge solutions in Python 3
+- `Daily Question/`: Daily LeetCode challenge solutions in Python 3  
