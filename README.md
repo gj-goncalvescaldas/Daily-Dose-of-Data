@@ -12,7 +12,7 @@ This repository documents my daily practice solving data-focused problems, with 
 
 ## ✅ Current Stats
 
-- **SQL:** Total exercises completed: **306**
+- **SQL:** Total exercises completed: **307**
 - **Daily Question (Python 3):** Total exercises completed: **13**
 
 ## 📁 Folder Structure
